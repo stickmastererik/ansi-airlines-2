@@ -1,0 +1,12 @@
+# executables / binary
+*.exe
+*.o
+*.s
+*.bin
+*.dmg
+*.out
+
+# code editor configs
+/.vscode/
+/.idea/
+/.nvim/

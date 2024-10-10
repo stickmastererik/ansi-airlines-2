@@ -3,7 +3,10 @@
 // Licensed under GNU GPL V3
 
 #include "computations/knots.hh"
-#include "input/input_mgr.hh"
+#include "io/input_mgr.hh"
+#include "io/output_stuff.h" // c file (output)
+
+#include <unistd.h>
 
 int position_mts[] = {0, 0};
 
@@ -44,5 +47,21 @@ void UpdatePlaneInfo() {
         rollDir = 'r';
     } else {
         rollDir = 'n';
+    }
+}
+
+int framesTGO = 15;
+
+int main(int argc, char* argv) {
+    while (true) {
+        rawlog("=========== Frame Report (%i/15) ===========\n");
+        
+        if (yaw) {
+            rawlog("yaw: yes\n");
+        } else {
+            rawlog("yaw: no\n");
+        }
+        
+        sleep(0.1);
     }
 }
