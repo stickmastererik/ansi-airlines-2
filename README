@@ -1,0 +1,7 @@
+ANSIA II (ANSIA 2)
+============================
+This is a basic terminal flight simulator I began working on in 2018. I never made any real progress because I had school, so I rewrote it.
+
+Named ANSIA originally (which stands for ANSI Airlines), this is a basic continuation of it's development.
+============================
+This can install over Makefile (part of GNU project). It was originally designed for *nix machines, and I don't plan to port it to Windows.
