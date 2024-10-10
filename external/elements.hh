@@ -1,3 +1,7 @@
+// ANSIA II
+// (C) Copyright 2018-2024 Adryan Arsov
+// Licensed under GNU GPL V3
+
 #ifndef elements
 #define elements
 

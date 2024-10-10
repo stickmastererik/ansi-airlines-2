@@ -1,3 +1,7 @@
+// ANSIA II
+// (C) Copyright 2018-2024 Adryan Arsov
+// Licensed under GNU GPL V3
+
 #ifndef ANSIA_II_INPUT_H_
 #define ANSIA_II_INPUT_H_
 
@@ -22,27 +26,28 @@ class Key {
 static Key RandKey = Key("NULL", false);
 
 class Input {
-    Key Keys[];
+    public:
+        static Key Keys[];
 
-    void Init() {
-        for (int i = 0; i < sizeof(KeysKB); i++) {
-            Key CurrentKey = Key(KeysKB[i], false);
-            Keys[elementsin(Keys) + 1] = CurrentKey;
-        }
-    }
-
-    bool IsPressed(std::string KeyCode) {
-        bool psd = false;
-        for (int i = 0; i < elementsin(Keys); i++) {
-            Key CurrentKey = Keys[i];
-
-            if (CurrentKey.KeyCode == KeyCode) {
-                psd = CurrentKey.Pressed;
+        static void Init() {
+            for (int i = 0; i < sizeof(KeysKB); i++) {
+                Key CurrentKey = Key(KeysKB[i], false);
+                Keys[elementsin(Keys) + 1] = CurrentKey;
             }
         }
 
-        return psd;
-    }
+        static bool IsPressed(std::string KeyCode) {
+            bool psd = false;
+            for (int i = 0; i < elementsin(Keys); i++) {
+                Key CurrentKey = Keys[i];
+
+                if (CurrentKey.KeyCode == KeyCode) {
+                    psd = CurrentKey.Pressed;
+                }
+            }
+
+            return psd;
+        }
 };
 
 #endif ANSIA_II_INPUT_H_
