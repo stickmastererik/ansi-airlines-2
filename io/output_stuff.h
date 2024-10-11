@@ -2,12 +2,12 @@
 // (C) Copyright 2018-2024 Adryan Arsov
 // Licensed under GNU GPL V3
 
-#include <stdio.h>
+#include <../libc/stdio.hh>
 
-void log(char* system, char* text) {
+void log(std::string system, std::string text) {
     printf(("[ANSIAII::%s]: %s\n", system, text));
 }
 
-void rawlog(char* text) {
+void rawlog(std::string text) {
     printf(("%s", text));
 }
